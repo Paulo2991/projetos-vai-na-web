@@ -5,17 +5,27 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Inter", sans-serif;
+  list-style-type: none;
 }
 
 :root {
   --primary-color: #4247A2;
   --color-verdeAgua: #52B095;
-  --color-buttonIdade: #113D74;
+  --color-buttonIdade: #1173D4;
   --color-saibaMais: #FFFFFF;
   --color-exameRotina: #F8F9FA;
   --color-feminino: #FDEFEF;
   --color-titleFeminino: #F9016F8A;
   --color-title-Segundario: #D038AAC0;
+  --color-footer: #022b64;
+  --color-cardRosa: #F9D5E5;
+  --text-cardRosa: #AD346A;
+  --color-cardAzul: #CFE2F3;
+  --text-cardAzul: #2769A3;
+  --color-cardVacina: #D4EDDA;
+  --text-cardVacina: #244A2D;
+  --color-cardSaude: #FFE9C2;
+  --text-cardSaude: #976C00;
 }
 
 header {
@@ -93,6 +103,7 @@ header .boxBanner .button .agendaIdade {
   padding: 15px 25px;
   border-radius: 8px;
   width: 25vw;
+  color: var(--color-saibaMais);
 }
 header .boxBanner .button .saibaMais {
   background-color: var(--color-saibaMais);
@@ -213,21 +224,9 @@ header .boxBanner .button .saibaMais {
   padding: 4rem 2rem;
   width: 100%;
   text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: var(--color-feminino);
 }
-.prevencaoFeminina .cards {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-  width: 100%;
-  margin-inline: auto;
-  max-width: 1200px;
-}
-.prevencaoFeminina .cards h2 {
+.prevencaoFeminina h2 {
   font-size: 2.7rem;
   font-weight: 800;
   line-height: 1.2;
@@ -236,10 +235,170 @@ header .boxBanner .button .saibaMais {
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
+.prevencaoFeminina .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+}
 .prevencaoFeminina .cards .card {
   padding: 20px;
   border-radius: 20px;
   width: 15em;
   height: 25em;
   background-color: var(--color-saibaMais);
+}
+
+.prevencaoMasculina {
+  padding: 4rem 2rem;
+  width: 100%;
+  text-align: center;
+  background-color: var(--color-exameRotina);
+}
+.prevencaoMasculina h2 {
+  font-size: 2.7rem;
+  font-weight: 800;
+  line-height: 1.2;
+  background: linear-gradient(to right, #3373D2 0%, #5EA7EF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.prevencaoMasculina .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+.prevencaoMasculina .cards .card {
+  padding: 20px;
+  border-radius: 20px;
+  width: 15em;
+  height: 25em;
+  background-color: var(--color-saibaMais);
+}
+
+.alertasImportantes {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+.alertasImportantes h2 {
+  font-size: 2.7rem;
+  font-weight: 800;
+  line-height: 1.2;
+  background: linear-gradient(to right, var(--primary-color) 0%, var(--color-verdeAgua) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.alertasImportantes .alertas {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  flex-wrap: wrap;
+}
+.alertasImportantes .alertas .card {
+  border-radius: 12px;
+  padding: 20px;
+  width: 416px;
+  height: 180px;
+}
+.alertasImportantes .alertas .card img {
+  width: 20px;
+  margin-left: 10px;
+}
+.alertasImportantes .alertas .card h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5em;
+  text-align: left;
+}
+.alertasImportantes .alertas .card p {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 400;
+}
+.alertasImportantes .alertas .cardRosa {
+  background-color: var(--color-cardRosa);
+}
+.alertasImportantes .alertas .cardRosa h3, .alertasImportantes .alertas .cardRosa p {
+  color: var(--text-cardRosa);
+}
+.alertasImportantes .alertas .cardAzul {
+  background-color: var(--color-cardAzul);
+}
+.alertasImportantes .alertas .cardAzul h3, .alertasImportantes .alertas .cardAzul p {
+  color: var(--text-cardAzul);
+}
+.alertasImportantes .alertas .cardVerdeAgua {
+  background-color: var(--color-cardVacina);
+}
+.alertasImportantes .alertas .cardVerdeAgua h3, .alertasImportantes .alertas .cardVerdeAgua p {
+  color: var(--text-cardVacina);
+}
+.alertasImportantes .alertas .cardAmarelo {
+  background-color: var(--color-cardSaude);
+}
+.alertasImportantes .alertas .cardAmarelo h3, .alertasImportantes .alertas .cardAmarelo p {
+  color: var(--text-cardSaude);
+}
+
+.footer {
+  background-color: var(--color-footer);
+  color: var(--color-saibaMais);
+  font-family: "Inter", sans-serif;
+  padding: 3rem 6rem;
+  border-top: 2px solid white;
+}
+.footer .informacoesFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .informacoesFooter .linksUteis {
+  flex: 1;
+  min-width: 250px;
+}
+.footer .informacoesFooter .linksUteis img {
+  margin-bottom: 1.3rem;
+}
+.footer .informacoesFooter .linksUteis h4 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.footer .informacoesFooter .linksUteis p {
+  color: var(--color-exameRotina);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.footer .informacoesFooter .linksUteis ul {
+  margin: 0;
+  padding: 0;
+}
+.footer .informacoesFooter .linksUteis ul li {
+  margin-bottom: 0.6rem;
+}
+.footer .informacoesFooter .linksUteis ul li a {
+  color: var(--color-exameRotina);
+}
+@media screen and (max-width: 600px) {
+  .footer .informacoesFooter {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }/*# sourceMappingURL=style.css.map */
